@@ -1,0 +1,59 @@
+
+body {
+    background-color: whitesmoke;
+    font-size: 16px;
+}
+
+.rotate{
+  width: fit-content;
+  font-size: 30px;
+  animation: rotate-text 800ms infinite linear;
+}
+.rotate-360{
+  width: fit-content;
+  font-size: 30px;
+  animation: rotate-text-360 800ms infinite linear;
+}
+.rotate-hr{
+transform:rotate(90deg)
+}
+.rotate-hr-180{
+transform:rotateX(180deg)
+}
+.rotate-hr-180Y{
+  transform:rotateY(180deg)
+  }
+.h1 {
+-webkit-text-stroke: 2px #000;
+display: inline-block;
+}
+@keyframes rotate-text{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(-90deg);
+  }
+}
+@keyframes rotate-text-360{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.top{
+  border-top: -35px;
+}
+.gradient {
+  background-image: linear-gradient(90deg, red,orange, yellow, green, aqua,blue,purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textflow 5s linear infinite;
+}
+@keyframes textflow {
+  from {background-position: 0% center}         
+  to {background-position: 200% center}
+}
