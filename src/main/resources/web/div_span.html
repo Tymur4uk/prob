@@ -3,16 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>DIV_SPAN</title>
-    <link href="../style.css" rel="stylesheet" type="text/css"/>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  
 </head>
 <body>
+<script>
+  document.onmousemove = (e) => {
+	document.onclick = () => {
+		let circle = document.createElement('div');
+		circle.classList.add('click');
+		circle.style.left = e.pageX + 'px';
+		circle.style.top = e.pageY + 'px';
+		document.body.appendChild(circle);
 
-<h1 class="h1" style=" margin-left: 10px; margin-top:20px; color:red; font-size: 50px;">Top Site</h1>
+		setTimeout(() => {
+			circle.remove();
+		}, 1000);
+	};
+};
+// document.onmousemove = (e) => {
+//   let body = document.querySelector('body');
+//   let snow = document.createElement('span');
+//   let x = e.pageX;
+//   let y = e.pageY;
+//   let size = Math.random() * 50;
+
+//   snow.style.left = x + 'px';
+//   snow.style.top = y + 'px';
+//   snow.style.width = size + 'px';
+//   snow.style.height = size + 'px';
+//   body.appendChild(snow);
+
+//   setTimeout(() => {
+//     snow.remove();
+//   }, 2000);
+// };
+</script>
+
+<h1 class="hhh" style=" margin-left: 10px; margin-top:-10px; color:red; font-size: 50px; margin-bottom: 45px;">Top Site</h1>
 <h5 style="margin-top:-60px; margin-left: 200px;">У лукоморья дуб зеленый; Златая цепь на дубе том: И днем и ночью кот ученый Всё ходит по цепи кругом; Идет направо — песнь заводит, Налево — сказку говорит. Там чудеса: там леший бродит, Русалка на ветвях сидит;
     </h5>
 <hr style="border-width: 30px; border-color: orange; margin-top:-80px;">
 
-<!--<div class="container">Block of text</div>-->
+  <h2 class="box" style="width: 100px; margin-left: 0px; margin-top: 40px;"></h2>
+
+<div style="margin-top: -1175px;">
 <a href="forms.html" style="color:black; font-size:24px; margin-left: 200px;">Home</a>
 <a href="forms.html" style="color:black; font-size:24px; margin-left: 50px;">Info</a>
 <a href="forms.html" style="color:black; font-size:24px; margin-left: 50px;">Help</a>
@@ -20,50 +55,76 @@
 <a href="forms.html" style="color:black; font-size:24px; margin-left: 50px;">Global</a>
 <a href="forms.html" style="color:black; font-size:24px; margin-left: 50px;">Other</a>
 
-<!--<span>Not Block of text</span>-->
-<hr style="border-width: 10px; border-color: Green; margin-left: 150px; ">
-<style>
-.vl {
-    border-left: 10px solid #002c00;
-    margin-left: 150px;
-    height: 700px;
-    margin-top: -18px;
-}
-
-</style>
-
-<div class="vl"></div>
-<style>
-.vll {
-border-left: 10px solid green;
-margin-left: 160px;
-height: 700px;
-margin-top:-700px;
-}
-
-</style>
-<div class="vll"></div>
-
-
+<div class="box" style="font-size: 20px; border-left: -600px;">
+    <div style="margin-left: -180px;">
 <details>
-    <summary style="margin-left: 180px; margin-top: -664px"> Here you will search additional information, but it will be
-        later, because, I don't write it yet
+    <summary style="margin-left: 180px; margin-top: 10px"> Here you will search additional information, but it will be
+        later, because, I haven't write it yet
     </summary>
     <h4 style="margin-left: 180px;">You don't have to read it</h4>
 </details>
+<br>
+<button id="myBtn" style="margin-left: 180px; height: 30px; font-size: 20px;">Open Modal</button>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">×</span>
+        <h2>Here is a very interesting text</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 <section style="margin-left: 180px;">
-    <h3>Java</h3>
-    <h4><span class="gradient" style=" font-size: 15px;"> I have to write what is Java, but i don't know what is it</span>
+    <h2>Java</h2>
+    <img src="snowman-90.gif" style="height: 300px; width: 360px; margin-left: 500px; margin-top: -120px;">
+
+    <h4 class="gradient" style=" font-size: 20px; margin-top: -200px;"> I have to write what is Java, but i don't know what is it
     </h4>
 </section>
 <section style="margin-left: 180px;">
     <h3>Kotlin</h3>
-    <h4>Oh, I don't <span class="gradient" style="font-size: 13px
-    ;">wanna </span> write about Kotlin. I don't know WHAT IS IT!! </h4>
+    <h4 style="display: inline-block; font-weight: normal;">Oh, I don't<h4 class="gradient" style="font-size: 20px; margin-left: 5px; display: inline-block;"> wanna </h4> write about Kotlin. I don't know WHAT IS IT!! </h4>
 </section>
-<object>
-    <param name="" value="">
-</object>
+<marquee behavior="alternate" direction="left" style="margin-left: 170px; font-size: 30px;" scrolldelay="10" truespeed="50"><img src="../Images/Mysite.png"></marquee>
 
 <details>
     <summary style="margin-left: 180px; font-size:20px">I am writing code with text "Choose your hobby here"</summary>
@@ -86,28 +147,18 @@ margin-top:-700px;
         </td>
     </tr>
 </table>
-<u>
-    <address style="color:blue; lighting-color: aqua; margin-left: 180px;">
+    <address style="color:blue; lighting-color: aqua; margin-left: 180px; text-decoration-line: underline;">
         https://drive.google.com/uc?id=1HvvtiUkWwNfYINQZdixwe1gyMo_iwwRX&export=download
     </address>
-</u>
-<i><a href="https://drive.google.com/uc?id=1HvvtiUkWwNfYINQZdixwe1gyMo_iwwRX&export=download"
-      style="color:blue; margin-left: 180px;">https://drive.google.com/uc?id=1HvvtiUkWwNfYINQZdixwe1gyMo_iwwRX&export=download</a>
-</i>
-<br>
-<hr class="rotate-hr-180" style="border-width: 10px; border-color: Green; margin-left: 160px; border-top: -1500px;">
+    
+</div></div></div>
 
-<p style="font-size:126px; margin-left: 90px; margin-top: -29px;">🌲
-</p>
-<p class="rotate" style="margin-left: 165px; margin-top: -170px;">🪓</p>
-<p class="top" style="font-size:50px; margin-left: 190px; margin-top: -90px;">🚶 </p>
 <br>
-<br>
-<br>
-<br>
-<p class="rotate-360" style="margin-left: 70px;">⊕Hello world</p>
-<br>
-<marquee behavior="scroll" direction="left" style="margin-left: 50px; font-size: 30px;" scrolldelay="10" truespeed="50"><img src="../Images/Mysite.png"></marquee>
-<marquee behavior="scroll" direction="up" style="font-size: 100px; height: max-content;"  scrolldelay="10" truespeed="50" >🛸</marquee>
+
+<!-- <hr class="rotate-hr-180" style="border-width: 10px; border-color: Green; margin-left: 160px; border-top: -1500px;"> -->
+
+
+<!-- border-left: border --100px; margin-top: -650px;-->
+
 </body>
 </html>
